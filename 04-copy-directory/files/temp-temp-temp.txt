@@ -1,0 +1,84 @@
+VITE
+========
+Здесь на канале можно посмотреть принципы работы с vite
+https://www.youtube.com/watch?v=QEdwJtMptTk&t=163s
+
+
+WEBPACK
+========
+Подготовить реферат на github по Вебпак
+Обязательно включить туда раздел по ссылке:
+https://www.robinwieruch.de/categories/webpack/
+
+Практический разбор настроек вебпака:
+https://www.youtube.com/watch?v=bozzyi8Tok0
+
+Рассмотренная сборка:
+https://github.com/ai297/webpack-ts-eslint--empty-project
+
+
+{
+  "name": "coffee-house",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "deploy": "npm run build && gh-pages -d dist -e coffee-house",
+    "deploy-only": "npx gh-pages -d dist -e coffee-house"
+
+  },
+  "devDependencies": {
+    "gh-pages": "^6.1.0",
+    "sass": "^1.69.5",
+    "sharp": "0.32.6",
+    "svgo": "^3.0.4",
+    "vite": "^5.0.0",
+    "vite-plugin-image-optimizer": "^1.1.7",
+    "vite-plugin-static-copy": "^1.0.0",
+    "vite-plugin-svg-spritemap": "^0.0.12"
+  },
+  "volta": {
+    "node": "18.18.2"
+  }
+}
+
+
+/// OLD
+{
+  "name": "empty_project",
+  "version": "0.0.0",
+  "description": "Empty project template",
+  "private": true,
+  "scripts": {
+    "build": "webpack",
+    "dev": "webpack serve --env development",
+    "lint": "eslint src"
+  },
+  "author": "Kris Casper",
+  "devDependencies": {
+    // "@typescript-eslint/eslint-plugin": "^4.22.0",
+    // "@typescript-eslint/parser": "^4.22.0",
+    "clean-webpack-plugin": "^4.0.0-alpha.0",
+    "copy-webpack-plugin": "^8.1.1",
+    "css-loader": "^5.2.4",
+    // "eslint": "^7.25.0",
+    // "eslint-config-airbnb-typescript": "^12.3.1",
+    // "eslint-plugin-import": "^2.22.1",
+    // "eslint-webpack-plugin": "^2.5.4",
+    "html-webpack-plugin": "^5.3.1",
+    "mini-css-extract-plugin": "^1.6.0",
+    "prettier": "3.2.1",
+    "sass": "^1.32.12",
+    "sass-loader": "^11.0.1",
+    "ts-loader": "^9.1.1",
+    "typescript": "^4.2.4",
+    "webpack": "^5.36.2",
+    "webpack-cli": "^4.6.0",
+    "webpack-dev-server": "^3.11.2"
+  }
+}
+
+Но перезагрузки страницы не проиходит, происходит динамическое обновление всего содержимого body (повторная переинициализация с новым вопросом). То что надо делать обновление копонетов в задании ничего не сказано, поэтому я и не стал переусложнять.
