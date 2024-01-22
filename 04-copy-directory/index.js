@@ -3,7 +3,8 @@ const { mkdir, readdir, unlink, copyFile } = require('fs').promises;
 
 const dirSource = path.join(__dirname, 'files');
 const dirDestination = path.join(__dirname, 'files-copy');
-const message = `The contents of directory 'files' were successfully copied to directory 'files-copy'`;
+const message =
+  'The contents of directory "files" were successfully copied to directory "files-copy"';
 
 console.time(message);
 mkdir(dirDestination, { recursive: true })
